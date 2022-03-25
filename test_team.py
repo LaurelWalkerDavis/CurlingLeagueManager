@@ -2,7 +2,7 @@ from team import Team
 from team_member import TeamMember
 import unittest
 
-from tests.fake_emailer import FakeEmailer
+from fake_emailer import FakeEmailer
 
 
 class TeamTests(unittest.TestCase):

@@ -36,8 +36,9 @@ class Competition(IdentifiedObject):
         emailer.send_plain_email(email_list, subject, message)
 
     def __str__(self):
-        num_of_teams = self.teams_competing.Length
+        num_of_teams = len(self.teams_competing)
         if self.date_time is None:
             return f"Competition at {self.location} with {num_of_teams} teams"
         else:
             return f"Competition at {self.location} on {self.date_time} with {num_of_teams} teams"
+

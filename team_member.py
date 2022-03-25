@@ -1,5 +1,4 @@
 from identified_object import IdentifiedObject
-from fake_emailer import FakeEmailer
 
 
 class TeamMember(IdentifiedObject):
