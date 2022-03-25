@@ -1,5 +1,6 @@
 from identified_object import IdentifiedObject
 
+
 class Competition(IdentifiedObject):
     """Describes a competition between teams. Inherits from IdentifiedObject."""
 
@@ -7,9 +8,9 @@ class Competition(IdentifiedObject):
     def teams_competing(self):  # must be read only
         return self._teams
 
-    @teams_competing.setter
-    def teams_competing(self, team_list):
-        self.teams_competing.Add(team_list)
+    # @teams_competing.setter
+    # def teams_competing(self, team_list):
+    #     self.teams_competing.Add(team_list)
 
     @property
     def date_time(self):

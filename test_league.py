@@ -80,12 +80,12 @@ class LeagueTests(unittest.TestCase):
         # so use sets.
         cs_names = {c.location for c in cs}  # set comprehension
         self.assertEqual({"t1 vs t2", "t1 vs t3", "t2 vs t1", "t3 vs t1"}, cs_names)
-
+        dummy = league.teams_for_member(league.teams[2].members[0])
         self.assertEqual([league.teams[2]], league.teams_for_member(league.teams[2].members[0]))
 
         # Grab a player from the third team
         cs = league.competitions_for_member(league.teams[2].members[0])
         # matchups are (t3, t1), (t3, t2), (t2, t3), (t1, t3) but we don't know what order they will be returned in
         # so use sets.
-        cs_names = {c.location for c in cs}  # set comprehensionq
+        cs_names = {c.location for c in cs}  # set comprehension
         self.assertEqual({"t3 vs t1", "t3 vs t2", "t2 vs t3", "t1 vs t3"}, cs_names)

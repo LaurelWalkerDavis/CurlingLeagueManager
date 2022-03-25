@@ -1,5 +1,4 @@
 from identified_object import IdentifiedObject
-from team_member import TeamMember
 
 
 class Team(IdentifiedObject):
@@ -7,7 +6,7 @@ class Team(IdentifiedObject):
 
     @property
     def name(self):
-        return self._name.title()
+        return self.team_name
 
     @property
     def members(self):  # must be read only
@@ -15,7 +14,7 @@ class Team(IdentifiedObject):
 
     def __init__(self, oid, name):
         super().__init__(oid)
-        self._name = name
+        self.team_name = name
         self.memberList = []
 
     def add_member(self, member):
